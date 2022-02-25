@@ -181,7 +181,6 @@ div.card>h2 {
 }
 
 .shop{
-    /* height: 400px; */
     margin:auto;
     width:80%;
     overflow-x: scroll;
@@ -231,7 +230,7 @@ h3{ margin-left:0px;
     margin: auto;
 }
 
-@media only screen and (max-width: 2000px) {
+@media only screen and (max-width: 850px) {
     .headerleft{
         height:100px;
         width:128px;
@@ -262,6 +261,7 @@ h3{ margin-left:0px;
         padding-bottom: 0px;
         padding-left: 5%;
         padding-right: 5%;
+        font-size: 36px;
     }
 
     .box4{
@@ -294,14 +294,8 @@ h3{ margin-left:0px;
     :root {
         --h1-font-size: 24px;
     }
-
-    .container{
-        width: 100%;
-        margin: auto;
-    }
-
     .shop{
-        width: 120%;
+        width: 95%;
     }
 }
 
