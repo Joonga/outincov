@@ -1,0 +1,312 @@
+/* Once Upon a Time in Coventry Website */
+/* Start date: Saturday 12th February 2022 */
+/* Made by J */
+
+/* System Light Mode */
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: #f0f0f0;
+        color: #353535
+    }
+
+    :root {
+        --color: #353535;
+        --background: #f0f0f0
+    }
+
+    h1{ color: var(--color);}
+    h2{ color: color;}
+    h3{ color: color;}
+    .menubar{background: rgba(230, 230, 230, 0.7);}
+    
+    .box1{
+        color:#8288ff;
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+
+    .box2{
+        color:#ba82ff;
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+
+    .box3{
+        color:#ff82c7;
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+
+    .box4{
+        background-color:color;
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+
+    .card{
+        box-shadow: 0 0 10px #bbbbbb;
+        color:#353535;
+        background-color: #ffffff;
+    }
+}
+
+/* System Dark Mode */
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #121212;
+        color: #f0f0f0
+    }
+
+    :root {
+        --color: #f0f0f0;
+        --background: #121212;
+      }
+    
+    h1{ color: var(--color);}
+    h2{ color: color;}
+    h3{ color: #ff82c7;}
+    .menubar{background: rgba(0, 0, 0, 0.7);}
+
+    .box1{
+        background-color:#8288ff;
+        color:white;
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+
+    .box2{
+        background-color:#ba82ff;
+        color:white;
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+
+    .box3{
+        background-color:#ff82c7;
+        color:white;
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+
+    .box4{
+        background-color:color;
+        display:block;
+        margin:auto;
+        width:80%;
+    }
+
+    .card{
+        box-shadow: 0 0 10px #000;
+        color:#f0f0f0;
+        background-color: #222222;
+    }
+}
+
+.headerleft {
+    height:100px;
+    width:128px;
+    float:left;
+    line-height:95px;
+}
+
+.headerright {
+    height:100px;
+    width:128px;
+    float:right;
+    line-height:95px;
+    text-align: center;
+}
+
+.menubar{
+    top: 0;
+    padding: 10px 0;
+    backdrop-filter:blur(12px);
+	-webkit-backdrop-filter:blur(12px);
+    height: auto;
+    width: 100%;
+    position: fixed;   
+}
+
+a{
+    text-decoration: none;
+}
+
+.logostyle{
+    height: 100%;
+    width: 50%;
+}
+
+.track:hover {
+    animation-play-state: paused;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card{
+    display:inline-block;
+    height:380px;
+    width:300px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    border-radius: 10px;
+}
+
+div.card>img {
+    height:300px;
+    width:300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+div.card>h2 {
+    padding: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-block-end: 0px;
+}
+
+.card:hover {
+    animation-play-state: paused;
+    transform: scale(1.05);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.shop{
+    /* height: 400px; */
+    margin:auto;
+    width:80%;
+    overflow-x: scroll;
+    padding-left: 20px;
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+h1{ margin-left:0px;
+    margin-top:0px;
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+}
+
+h2{ margin-left:0px;
+    margin-top:0px;
+    font-family: futura-pt-demi, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-block-end: 6.4px;
+}
+
+h3{ margin-left:0px;
+    margin-top:0px;
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 60px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-block-end: 16px;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 850px) {
+    .headerleft{
+        height:100px;
+        width:128px;
+        float:left;
+        line-height:95px;
+        display:none;
+    }
+
+    .headerright {
+        height:80px;
+        width:95px;
+        text-align: left;
+    }
+
+    .spacing{
+        display: none;
+    }
+
+    h2{ 
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    h3{ 
+        margin-left:0px;
+        margin-top:0px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .box4{
+        width:100%;
+    }
+
+    .box3{
+        width:100%;
+    }
+
+    .box2{
+        width:100%;
+    }
+
+    .box1{
+        width:100;
+    }
+
+    .container{
+        width: 100%;
+        margin: auto
+    }
+
+    .fixed-header{
+        width:100%;
+        display:block;
+        margin:auto;
+    }
+
+    :root {
+        --h1-font-size: 24px;
+    }
+
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+
+    .shop{
+        width: 120%;
+    }
+}
+
+.image:hover{
+    backdrop-filter: blur(10px);
+    filter: blur(4px);
+    transition: 0.2s;
+}
