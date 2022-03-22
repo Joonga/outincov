@@ -4,119 +4,49 @@
 
 /* System Light Mode */
 @media (prefers-color-scheme: light) {
-	body {
-		background-color: #f0f0f0;
-        color: #353535
-    }
-
-    :root {
-        --color: #353535;
-        --background: #f0f0f0
-    }
-
-    h1{ color: var(--color);}
-    h2{ color: color;}
-    h3{ color: color;}
-    .menubar{background: rgba(230, 230, 230, 0.7);}
+	body {background-color: #f0f0f0; color: #353535}
+    h1 {color: color;}
+    h2 {color: #353535}
+    h3 {color: color;}
+    .menubar {background: rgba(230, 230, 230, 0.7)}
+    .card {box-shadow: 0 0 10px #bbbbbb; color:#353535; background-color: #ffffff;}
     
-    .box1{
-        color:#8288ff;
-        display:block;
-        margin:auto;
-        width:80%;
-    }
-
-    .box2{
-        color:#ba82ff;
-        display:block;
-        margin:auto;
-        width:80%;
-    }
-
-    .box3{
-        color:#ff82c7;
-        display:block;
-        margin:auto;
-        width:80%;
-    }
-
-    .box4{
-        background-color:color;
-        display:block;
-        margin:auto;
-        width:80%;
-    }
-
-    .card{
-        box-shadow: 0 0 10px #bbbbbb;
-        color:#353535;
-        background-color: #ffffff;
-    }
+    #box1 {color:#FFD773}
+    #box2 {color:#FFB26B}
+    #box3 {color:#FF8288}
+    #box4 {background-color:color}
 }
 
 /* System Dark Mode */
 @media (prefers-color-scheme: dark) {
-	body {
-		background-color: #121212;
-        color: #f0f0f0
-    }
+	body {background-color: #121212; color: #f0f0f0;}
+    h1 {color: #82C7FF;}
+    h2 {color: #f0f0f0}
+    h3 {color: color;}
+    .menubar {background: rgba(0, 0, 0, 0.7)}
+    .card {box-shadow: 0 0 10px #000; color:#f0f0f0; background-color: #222222;}
 
-    :root {
-        --color: #f0f0f0;
-        --background: #121212;
-      }
-    
-    h1{ color: var(--color);}
-    h2{ color: color;}
-    h3{ color: #ff82c7;}
-    .menubar{background: rgba(0, 0, 0, 0.7);}
-
-    .box1{
-        background-color:#8288ff;
-        color:white;
-        display:block;
-        margin:auto;
-        width:80%;
-    }
-
-    .box2{
-        background-color:#ba82ff;
-        color:white;
-        display:block;
-        margin:auto;
-        width:80%;
-    }
-
-    .box3{
-        background-color:#ff82c7;
-        color:white;
-        display:block;
-        margin:auto;
-        width:80%;
-    }
-
-    .box4{
-        background-color:color;
-        display:block;
-        margin:auto;
-        width:80%;
-    }
-
-    .card{
-        box-shadow: 0 0 10px #000;
-        color:#f0f0f0;
-        background-color: #222222;
-    }
+    #box1 {background-color:#FFD773;color:white}
+    #box2 {background-color:#FFB26B;color:white}
+    #box3 {background-color:#FF8288;color:white}
+    #box4 {background-color:color}
 }
 
-.headerleft {
+.textbox {
+    display:block;
+    margin:auto;
+    width:80%;
+}
+
+.menubar-left {
     height:100px;
     width:128px;
     float:left;
     line-height:95px;
 }
 
-.headerright {
+/* Items on the right side of the sticky header */
+.menubar-right {
     height:100px;
     width:128px;
     float:right;
@@ -131,12 +61,10 @@
 	-webkit-backdrop-filter:blur(12px);
     height: auto;
     width: 100%;
-    position: fixed;   
+    position: fixed; 
 }
 
-a{
-    text-decoration: none;
-}
+a{text-decoration: none;}
 
 .logostyle{
     height: 100%;
@@ -166,7 +94,7 @@ div.card>img {
     border-top-right-radius: 10px;
 }
 
-div.card>h2 {
+div.card>h3 {
     padding: 16px;
     padding-left: 20px;
     padding-right: 20px;
@@ -175,7 +103,10 @@ div.card>h2 {
 
 .card:hover {
     animation-play-state: paused;
-    transform: scale(1.05);
+    transform: scale(1.07);
+    box-shadow: 0 0 10px #82C7FF;
+    background-color: #82C7FF;
+    color:#000;
     transition: 0.2s;
     cursor: pointer;
 }
@@ -186,10 +117,12 @@ div.card>h2 {
     overflow-x: scroll;
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     white-space: nowrap;
 }
 
-h1{ margin-left:0px;
+h2{ margin-left:0px;
     margin-top:0px;
     font-family: futura-pt-bold, sans-serif;
     font-weight: 700;
@@ -197,7 +130,7 @@ h1{ margin-left:0px;
     font-size: 24px;
 }
 
-h2{ margin-left:0px;
+h3{ margin-left:0px;
     margin-top:0px;
     font-family: futura-pt-demi, sans-serif;
     font-weight: 600;
@@ -212,7 +145,7 @@ h2{ margin-left:0px;
     margin-block-end: 6.4px;
 }
 
-h3{ margin-left:0px;
+h1{ margin-left:0px;
     margin-top:0px;
     font-family: playfair-display, serif;
     font-weight: 900;
@@ -230,8 +163,11 @@ h3{ margin-left:0px;
     margin: auto;
 }
 
-@media only screen and (max-width: 850px) {
-    .headerleft{
+/* Mobile */
+@media only screen and (max-width: 875px) {
+
+    /* Items on left side of menubar disappear when entering mobile mode so everything fits on the width of the screen */
+    .menubar-left{
         height:100px;
         width:128px;
         float:left;
@@ -239,22 +175,24 @@ h3{ margin-left:0px;
         display:none;
     }
 
-    .headerright {
+    /* Items that were on the right of the menubar have reduced spacing to accomodate for smaller devices */
+    .menubar-right {
         height:80px;
         width:95px;
         text-align: left;
     }
 
+    /* The spacing between the logo and the items on the left of the menubar is not required as those items disappear when in mobile mode */
     .spacing{
         display: none;
     }
 
-    h2{ 
+    h3{ 
         padding-left: 5%;
         padding-right: 5%;
     }
 
-    h3{ 
+    h1{ 
         margin-left:0px;
         margin-top:0px;
         padding-top: 10px;
@@ -264,21 +202,7 @@ h3{ margin-left:0px;
         font-size: 36px;
     }
 
-    .box4{
-        width:100%;
-    }
-
-    .box3{
-        width:100%;
-    }
-
-    .box2{
-        width:100%;
-    }
-
-    .box1{
-        width:100;
-    }
+    .textbox{width:100%}
 
     .container{
         width: 100%;
@@ -292,10 +216,10 @@ h3{ margin-left:0px;
     }
 
     :root {
-        --h1-font-size: 24px;
+        --h2-font-size: 24px;
     }
     .shop{
-        width: 91%;
+        width: 93%;
     }
 }
 
@@ -304,3 +228,125 @@ h3{ margin-left:0px;
     filter: blur(4px);
     transition: 0.2s;
 }
+
+.cta{
+    background-color: #FFD773;
+    color: rgb(0, 0, 0);
+    height: 50px;
+    width: fit-content;
+    float: center;
+    padding: 15px;
+    padding-bottom: 0px;
+    display:block;
+    margin:auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+div.cta:hover{
+    background-color: #FFB26B;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+@keyframes fling-minislide {50%{opacity:1;} 50%{opacity:0;}} 
+.fling-minislide img:nth-child(2){animation-delay:0s;}
+.fling-minislide img:nth-child(1){animation-delay:5s;}
+
+.fling-minislide {
+    width: 300px;
+    height: 305px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fling-minislide img{
+    position:absolute;
+    animation:fling-minislide 10s infinite;
+    opacity: 100%;
+}
+
+/* Footer */
+/* Some lines of code may be repeated so that this set of code will work */
+/* With all group members' websites */
+
+footer .footercontainer{
+    margin: auto;
+    columns: 3;
+    display: block;
+}
+
+footer .textbox{
+    display:block;
+    margin:auto;
+    width:80%;
+    margin-block-end: 50px;
+}
+
+footer h2{
+    color:#f0f0f0;
+    margin-left:0px;
+    margin-top:0px;
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 161.8%;
+}
+
+footer f3{
+    font-family: futura-pt-demi, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    margin-block-end: 6.4px;
+}
+
+footer f1{
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-block-end: 16px;
+}
+
+footer .button{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    height: 40px;
+    align-self: center;
+    padding: 8%;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    border-radius: 6px;
+    margin: 10px;
+    text-align: center;
+}
+
+footer div.button:hover{
+    color: white;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 875px){
+    footer .footercontainer{display: grid;}
+    footer .textbox{width:100%;}
+}
+
+footer {background-color: #121212;}
+footer a{text-decoration: none;}
+
+#footer1{color:#f0f0f0; background-color: #121212;}
+#footer2{background-color:#121212; color:#f0f0f0; break-inside: avoid-column; height: auto;}
+#twitter:hover{background-color:#00acee;color:rgba(255,255,255,0.75)}
+#facebook:hover{background-color:#3b5998;color:rgba(255,255,255,0.75)}
+#instagram:hover{background-color:#E1306C;color:rgba(255,255,255,0.75)}
+#spring:hover{background-color:#00acee;color: rgba(0,0,0,0.6)}
+#summer:hover{background-color:#FFD773;color: rgba(0,0,0,0.6)}
+#autumn:hover{background-color:#FFB26B;color: rgba(0,0,0,0.6)}
+#winter:hover{background-color:#82c7ff;color: rgba(0,0,0,0.6)}
+#cityofculture:hover{background-color: rgb(67,124,255);color: white}
