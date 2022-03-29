@@ -24,6 +24,7 @@
     h2 {color: #f0f0f0}
     h3 {color: color;}
     .menubar {background: rgba(0, 0, 0, 0.7)}
+    .merch-card {box-shadow: 0 0 10px #000; color:#f0f0f0; background-color: #222222;}
     .card {box-shadow: 0 0 10px #000; color:#f0f0f0; background-color: #222222;}
 
     #box1 {background-color:#FFD773;color:white}
@@ -32,26 +33,61 @@
     #box4 {background-color:color}
 }
 
+.merch-card{
+    position: relative;
+    overflow: hidden;
+    display:block;
+    margin:auto;
+    height:450px;
+    width: 65%;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    border-radius: 10px;
+}
+
+    div.merch-card>img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        margin: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: all 300ms ease-in-out;
+    }
+
+    div.image-caption>h1, div.image-caption>h3{
+        color: #121212;
+    }
+
+    .merch-card:hover {
+        animation-play-state: paused;
+        transform: scale(1.07);
+        box-shadow: 0 0 10px #82C7FF;
+        background-color: #82C7FF;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+
+    .image-caption {
+        width: 100%;
+        height: 100%;
+        background: rgba(130, 199, 255, 0.6);
+        position: absolute;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+
+    .merch-card:hover .image-caption {opacity: 1;}
+    .merch-card:hover img {filter: blur(6px);}
+
 .textbox {
     display:block;
     margin:auto;
     width:80%;
-}
-
-.menubar-left {
-    height:100px;
-    width:128px;
-    float:left;
-    line-height:95px;
-}
-
-/* Items on the right side of the sticky header */
-.menubar-right {
-    height:100px;
-    width:128px;
-    float:right;
-    line-height:95px;
-    text-align: center;
 }
 
 .menubar{
@@ -61,8 +97,25 @@
 	-webkit-backdrop-filter:blur(12px);
     height: auto;
     width: 100%;
-    position: fixed; 
+    position: fixed;
+    z-index: 999;
 }
+
+    .menubar-left {
+        height:100px;
+        width:128px;
+        float:left;
+        line-height:95px;
+    }
+
+    /* Items on the right side of the sticky header */
+    .menubar-right {
+        height:100px;
+        width:128px;
+        float:right;
+        line-height:95px;
+        text-align: center;
+    }
 
 a{text-decoration: none;}
 
@@ -77,40 +130,6 @@ a{text-decoration: none;}
     cursor: pointer;
 }
 
-.card{
-    display:inline-block;
-    height:380px;
-    width:300px;
-    margin-right: 16px;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    border-radius: 10px;
-}
-
-div.card>img {
-    height:300px;
-    width:300px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-div.card>h3 {
-    padding: 16px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-block-end: 0px;
-}
-
-.card:hover {
-    animation-play-state: paused;
-    transform: scale(1.07);
-    box-shadow: 0 0 10px #82C7FF;
-    background-color: #82C7FF;
-    color:#000;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
 .shop{
     margin:auto;
     width:80%;
@@ -121,6 +140,40 @@ div.card>h3 {
     padding-bottom: 10px;
     white-space: nowrap;
 }
+
+    .card{
+        display:inline-block;
+        height:380px;
+        width:300px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        margin-top: 16px;
+        border-radius: 10px;
+    }
+
+        div.card>img {
+            height:300px;
+            width:300px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        div.card>h3 {
+            padding: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-block-end: 0px;
+        }
+
+        .card:hover {
+            animation-play-state: paused;
+            transform: scale(1.07);
+            box-shadow: 0 0 10px #82C7FF;
+            background-color: #82C7FF;
+            color:#000;
+            transition: 0.2s;
+            cursor: pointer;
+        }
 
 h2{ margin-left:0px;
     margin-top:0px;
@@ -218,8 +271,12 @@ h1{ margin-left:0px;
     :root {
         --h2-font-size: 24px;
     }
+
     .shop{
         width: 93%;
+    }
+    .merch-card{
+        width: 95%;
     }
 }
 
@@ -242,6 +299,7 @@ h1{ margin-left:0px;
     border-radius: 6px;
     margin-bottom: 10px;
 }
+
 div.cta:hover{
     background-color: #FFB26B;
     transform: scale(1.2);
