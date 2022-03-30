@@ -1,0 +1,440 @@
+/* Once Upon a Time in Coventry Website */
+/* Start date: Saturday 12th February 2022 */
+/* Made by J */
+
+/* System Light Mode */
+@media (prefers-color-scheme: light) {
+	body {
+        background-color: #f0f0f0;
+        color: #353535;
+        background-image: url("images/background-light.svg");
+    }
+
+    h1 {color: color;}
+    h2 {color: #353535}
+    h3 {color: color;}
+    .menubar {background: rgba(230, 230, 230, 0.7)}
+    .card, .expectation-card {box-shadow: 0 0 10px #bbbbbb; color:#353535; background-color: #ffffff;}
+    .exp-card {box-shadow: 0 0 10px #bbbbbb}
+
+    #box1 {color:#FFD773}
+    #box2 {color:#FFB26B}
+    #box3 {color:#FF8288}
+    #box4 {background-color:color}
+}
+
+/* System Dark Mode */
+@media (prefers-color-scheme: dark) {
+	body{
+        background-color: #121212;
+        color: #f0f0f0;
+        background-image: url("images/background-dark.svg");
+    }
+
+    h1 {color: #82C7FF;}
+    h2 {color: #f0f0f0}
+    h3 {color: color;}
+    .menubar {background: rgba(0, 0, 0, 0.7)}
+    .merch-card {box-shadow: 0 0 10px #000; color:#f0f0f0; background-color: #222222;}
+    .card, .expectation-card {box-shadow: 0 0 10px #000; color:#f0f0f0; background-color: #222222;}
+    .exp-card {box-shadow: 0 0 10px #000}
+
+    #box1 {background-color:#FFD773;color:white}
+    #box2 {background-color:#FFB26B;color:white}
+    #box3 {background-color:#FF8288;color:white}
+    #box4 {background-color:color}
+}
+
+
+/* Fonts */
+h1{ margin-left:0px;
+    margin-top:0px;
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 60px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-block-end: 16px;}
+h2{ margin-left:0px;
+    margin-top:0px;
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    margin-block-end: 0px;}
+h3{ margin-left:0px;
+    margin-top:0px;
+    font-family: futura-pt-demi, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-block-end: 0px;}
+a{text-decoration: none;}
+/* Text Container */
+.textbox {display:block; margin:auto; width:80%;}
+
+
+/* Navigation/Menu bar */
+.menubar{
+    top: 0;
+    padding: 10px 5% 0 5%;
+    backdrop-filter:blur(12px);
+	-webkit-backdrop-filter:blur(12px);
+    height: 110px;
+    width: 90%;
+    position: fixed;
+    z-index: 999;
+    margin: auto;
+
+}
+    /* Items on the left side of the sticky menubar */
+    .menubar-left {
+        height:100px;
+        width: fit-content;
+        float:left;
+        line-height:95px;
+        margin: auto 20px auto 20px;
+    }
+    /* Items on the right side of the sticky menubar */
+    .menubar-right {
+        height:100px;
+        width: fit-content;
+        float:right;
+        line-height:95px;
+        margin: auto 20px auto 20px;
+    }
+
+
+
+
+/* Hero Viewport */
+.hero {
+    color: #f0f0f0;
+    display:block;
+    margin:auto;
+    width:100%;
+    height: 100vh;
+    background-image: url("images/hero.png");
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Experiences Viewport */
+.exp-card{
+    position: relative;
+    overflow: hidden;
+    display:block;
+    margin:auto;
+    height:450px;
+    width: 65%;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    border-radius: 10px;
+}
+    div.exp-card>img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        margin: auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: all 300ms ease-in-out;
+    }
+    .exp-card:hover {
+        animation-play-state: paused;
+        transform: scale(1.07);
+        box-shadow: 0 0 10px #82C7FF;
+        background-color: #82C7FF;
+        transition: 0.2s;
+    }
+    .image-caption {
+        width: 100%;
+        height: 100%;
+        background: rgba(130, 199, 255, 0.6);
+        position: absolute;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+    }
+    div.image-caption>h1, div.image-caption>h3 {color: #121212;}
+    .exp-card:hover .image-caption {opacity: 1;}
+    .exp-card:hover img {filter: blur(6px);}
+
+
+/* Merchandise Viewport */
+.shop{
+    margin:auto;
+    width:80%;
+    overflow-x: scroll;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: nowrap;
+}
+    .card{
+        display:inline-block;
+        height:380px;
+        width:300px;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        margin-top: 16px;
+        border-radius: 10px;
+    }
+        div.card>img {
+            height:300px;
+            width:300px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        div.card>h3 {
+            padding: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-block-end: 0px;
+        }
+        .card:hover {
+            animation-play-state: paused;
+            transform: scale(1.07);
+            box-shadow: 0 0 10px #82C7FF;
+            background-color: #82C7FF;
+            color:#000;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+
+
+
+
+                .expectations{
+                    margin: auto;
+                    columns: 2;
+                    width:65%;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-top: 10px;
+                    overflow: hidden;
+                }
+                
+                .expectation-card{
+                    height: fit-content;
+                    width:100%;
+                    margin-right: 16px;
+                    margin-bottom: 16px;
+                    margin-block-end: 12px;
+                    border-radius: 10px;
+                    padding-bottom: 5px;
+                    overflow: hidden;
+                }
+                div.expectation-card>img {
+                    height:80%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+                div.expectation-card>h3 {
+                    padding: 16px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    margin-block-end: 0px;
+                }
+
+
+
+
+
+
+
+
+/* Mobile */
+@media only screen and (max-width: 900px) {
+
+    .menubar{padding: 10px 2% 0px 2%; width: 96%;}
+
+    /* Items on left side of menubar disappear when entering mobile mode so everything fits on the width of the screen */
+    .menubar-left{display:none}
+
+    /* The spacing between the logo and the items on the left of the menubar is not required as those items disappear when in mobile mode */
+    .spacing{display: none}
+
+    h3{ padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    h1{ margin-left:0px;
+        margin-top:0px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 36px;
+    }
+
+    .expectations{width:90%; display: grid;}
+
+    .textbox{width:100%}
+    :root {--h2-font-size: 24px;}
+    .shop{width: 93%;}
+    .exp-card{width: 90%;}
+}
+
+
+.cta{
+    background-color: #FFD773;
+    color: rgb(0, 0, 0);
+    height: 50px;
+    width: fit-content;
+    float: center;
+    padding: 15px;
+    padding-bottom: 0px;
+    display:block;
+    margin:auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+div.cta:hover{
+    background-color: #FFB26B;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+@keyframes fling-minislide {50%{opacity:1;} 50%{opacity:0;}} 
+.fling-minislide img:nth-child(2){animation-delay:0s;}
+.fling-minislide img:nth-child(1){animation-delay:5s;}
+
+.fling-minislide {
+    width: 300px;
+    height: 305px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fling-minislide img{
+    position:absolute;
+    animation:fling-minislide 10s infinite;
+    opacity: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+/* Some lines of code may be repeated so that this set of code will work */
+/* With all group members' websites */
+
+footer .footercontainer{
+    margin: auto;
+    columns: 3;
+    display: block;
+}
+
+footer .textbox{
+    display:block;
+    margin:auto;
+    width:80%;
+    margin-block-end: 50px;
+}
+
+footer h2{
+    color:#f0f0f0;
+    margin-left:0px;
+    margin-top:0px;
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 161.8%;
+}
+
+footer f3{
+    font-family: futura-pt-demi, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    margin-block-end: 6.4px;
+}
+
+footer f1{
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-block-end: 16px;
+}
+
+footer .button{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    height: 40px;
+    align-self: center;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    border-radius: 6px;
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+}
+
+footer div.button:hover{
+    color: white;
+    transform: scale(1.07);
+    transition: 0.3s;
+}
+
+@media only screen and (max-width: 1025px){
+    footer .footercontainer{display: grid;}
+    footer .textbox{width:100%;}
+    footer .button{margin-left: 24px; margin-right: 24px;}
+}
+
+footer {background-color: #121212;}
+footer a{text-decoration: none;}
+
+#footer1{color:#f0f0f0; background-color: #121212;}
+#footer2{background-color:#121212; color:#f0f0f0; break-inside: avoid-column; height: auto;}
+#twitter:hover{background-color:#00acee;color:rgba(255,255,255,0.75)}
+#facebook:hover{background-color:#3b5998;color:rgba(255,255,255,0.75)}
+#instagram:hover{background-color:#E1306C;color:rgba(255,255,255,0.75)}
+#spring:hover{background-color:#84FBAA;color: rgba(0,0,0,0.6)}
+#summer:hover{background-color:#FFD773;color: rgba(0,0,0,0.6)}
+#autumn:hover{background-color:#FFB26B;color: rgba(0,0,0,0.6)}
+#winter:hover{background-color:#82c7ff;color: rgba(0,0,0,0.6)}
+#cityofculture:hover{background-color: rgb(67,124,255);color: white}
