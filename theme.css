@@ -134,6 +134,8 @@ a{text-decoration: none;}
 }
 
 
+
+
 /* Experiences Viewport */
 .exp-card{
     position: relative;
@@ -174,10 +176,14 @@ a{text-decoration: none;}
         position: absolute;
         opacity: 0;
         transition: all 300ms ease-in-out;
+        display: flex;
+        align-items: center;
     }
     div.image-caption>h1, div.image-caption>h3 {color: #121212;}
     .exp-card:hover .image-caption {opacity: 1;}
     .exp-card:hover img {filter: blur(6px);}
+
+
 
 
 /* Merchandise Viewport */
@@ -225,46 +231,41 @@ a{text-decoration: none;}
 
 
 
-
-                .expectations{
-                    margin: auto;
-                    columns: 2;
-                    width:65%;
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    padding-top: 10px;
-                    overflow: hidden;
-                }
-                
-                .expectation-card{
-                    height: fit-content;
-                    width:100%;
-                    margin-right: 16px;
-                    margin-bottom: 16px;
-                    margin-block-end: 12px;
-                    border-radius: 10px;
-                    padding-bottom: 5px;
-                    overflow: hidden;
-                }
-                div.expectation-card>img {
-                    height:80%;
-                    width: 100%;
-                    object-fit: cover;
-                    border-top-left-radius: 10px;
-                    border-top-right-radius: 10px;
-                }
-                div.expectation-card>h3 {
-                    padding: 16px;
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    margin-block-end: 0px;
-                }
-
-
-
-
-
-
+/* Expectations Viewport */
+.expectations{
+    height: fit-content;
+    margin: auto;
+    columns: 2;
+    width:65%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+    .expectation-card{
+        height: fit-content;
+        width:100%;
+        margin-right: 16px;
+        margin-bottom: 16px;
+        margin-block-end: 12px;
+        border-radius: 10px;
+        padding-bottom: 5px;
+    }
+        div.expectation-card>img {
+            height:80%;
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        div.expectation-card>h3 {
+            padding: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-block-end: 0px;
+        }
 
 
 /* Mobile */
@@ -292,7 +293,7 @@ a{text-decoration: none;}
     }
 
     .expectations{width:90%; display: grid;}
-
+    .image-caption {display: blo;}
     .textbox{width:100%}
     :root {--h2-font-size: 24px;}
     .shop{width: 93%;}
@@ -351,9 +352,89 @@ div.cta:hover{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 /* Some lines of code may be repeated so that this set of code will work */
 /* With all group members' websites */
+
+/* Fonts */
+footer h2{
+    color:#f0f0f0;
+    margin-left:0px;
+    margin-top:0px;
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 161.8%;
+}
+footer f3{
+    font-family: futura-pt-demi, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 150%;
+    margin-block-end: 6.4px;
+}
+footer f1{
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-block-end: 16px;
+}
 
 footer .footercontainer{
     margin: auto;
@@ -366,37 +447,6 @@ footer .textbox{
     margin:auto;
     width:80%;
     margin-block-end: 50px;
-}
-
-footer h2{
-    color:#f0f0f0;
-    margin-left:0px;
-    margin-top:0px;
-    font-family: futura-pt-bold, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 161.8%;
-}
-
-footer f3{
-    font-family: futura-pt-demi, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 16px;
-    letter-spacing: 0px;
-    line-height: 150%;
-    margin-block-end: 6.4px;
-}
-
-footer f1{
-    font-family: playfair-display, serif;
-    font-weight: 900;
-    font-style: normal;
-    font-size: 40px;
-    padding-top: 5px;
-    padding-bottom: 0px;
-    margin-block-end: 16px;
 }
 
 footer .button{
