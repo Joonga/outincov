@@ -46,6 +46,16 @@
 }
 
 
+.shop::-webkit-scrollbar {
+    height: 8px;
+  }
+
+.shop::-webkit-scrollbar-thumb {
+    background: #FFD773;
+    border-radius:10000px;
+}
+
+
 /* Fonts */
 h1{ margin-left:0px;
     margin-top:0px;
@@ -86,6 +96,8 @@ a{text-decoration: none;}
 /* Navigation/Menu bar */
 .menubar{
     top: 0;
+    left: 0;
+    right: 0;
     padding: 10px 5% 0 5%;
     backdrop-filter:blur(12px);
 	-webkit-backdrop-filter:blur(12px);
@@ -181,7 +193,7 @@ a{text-decoration: none;}
     }
     div.image-caption>h1, div.image-caption>h3 {color: #121212;}
     .exp-card:hover .image-caption {opacity: 1;}
-    .exp-card:hover img {filter: blur(6px);}
+    .exp-card:hover img {filter: blur(8px);}
 
 
 
