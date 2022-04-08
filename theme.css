@@ -292,7 +292,7 @@ a{text-decoration: none;}
     .shop{width: 93%;}
     .map{width: 90%}
     .exp-card{width: 90%;}
-    .hero {background-attachment: none;}
+    .hero {background-attachment: initial;}
 }
 
 
