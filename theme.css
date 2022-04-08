@@ -120,7 +120,8 @@ a{text-decoration: none;}
     background-attachment: fixed; /* Image will not move while the text above it will, creating a paralax effect */
     background-position: center; /* Image will remain centered when being cropped */
     background-repeat: no-repeat; /* Image will not repeat when out of bounds */
-    background-size: cover;} /* Image will span the entire viewport */
+    background-size: cover;
+    -webkit-background-size: cover;} /* Image will span the entire viewport */
 
 
 /* Expectations Viewport */
